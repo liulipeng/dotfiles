@@ -1,9 +1,4 @@
 # path, the 0 in the filename causes this to load first
-path=(
-  $path
-  $HOME/.yadr/bin
-  $HOME/.yadr/bin/yadr
-)
 export PATH=${PATH}:/usr/local/mysql/bin
 export PATH=${PATH}:~/.composer/vendor/bin
 export PATH=/usr/local/php7/sbin/:${PATH}
@@ -20,5 +15,15 @@ export GOPATH=/Users/liulipeng/go
 export GOBIN=/Users/liulipeng/go/bin
 export PATH=${PATH}:${GOBIN}
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+pathAppend() {
+  # Only adds to the path if it's not already there
+  if ! echo $PATH | egrep -q "(^|:)$1($|:)" ; then
+    PATH=$PATH:$1
+  fi
+}
 
+# Remove duplicate entries from PATH:
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
+
+pathAppend "$HOME/.yadr/bin"
+pathAppend "$HOME/.yadr/bin/yadr"
