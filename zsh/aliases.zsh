@@ -211,3 +211,5 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+alias phptags='ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cdfi  --languages=php'

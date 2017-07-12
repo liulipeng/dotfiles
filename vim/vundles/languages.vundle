@@ -1,5 +1,4 @@
 Bundle 'sheerun/vim-polyglot'
-Bundle 'garbas/vim-snipmate.git'
 Bundle 'honza/vim-snippets'
 Bundle 'jtratner/vim-flavored-markdown.git'
 Bundle 'scrooloose/syntastic.git'
@@ -7,3 +6,29 @@ Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'skwp/vim-html-escape'
 Bundle 'mxw/vim-jsx'
 Bundle 'jparise/vim-graphql'
+
+" 重构
+Bundle 'adoy/vim-php-refactoring-toolbox'
+
+" 自动注释
+Bundle 'liulipeng/PDV--phpDocumentor-for-Vim'
+Bundle 'tobyS/pdv'
+
+Bundle 'majutsushi/tagbar'
+
+" PHP 自动导入命名空间
+Bundle 'arnaud-lb/vim-php-namespace'
+
+Bundle 'stanangeloff/php.vim'
+" Bundle 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+
+" Track the engine.
+Bundle 'SirVer/ultisnips'
+
+" " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+" " If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
